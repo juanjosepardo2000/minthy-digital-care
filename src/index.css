@@ -17,19 +17,19 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 20% 15%;
 
-    /* Medical Blue - Professional and trustworthy */
-    --primary: 210 95% 50%;
+    /* Electric Blue - Tech-Chic Primary */
+    --primary: 195 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 210 95% 65%;
-    --primary-dark: 210 95% 35%;
+    --primary-light: 195 100% 65%;
+    --primary-dark: 195 100% 40%;
 
-    /* Health Green - Wellness and vitality */
-    --secondary: 155 65% 50%;
+    /* Vibrant Teal - Modern accent */
+    --secondary: 180 85% 45%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 155 65% 65%;
+    --secondary-light: 180 85% 60%;
 
-    /* Accent Purple - Innovation */
-    --accent: 270 60% 60%;
+    /* Accent for highlights */
+    --accent: 195 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --muted: 210 30% 96%;
@@ -60,38 +60,39 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 210 30% 8%;
-    --foreground: 0 0% 95%;
+    --background: 220 30% 6%;
+    --foreground: 0 0% 98%;
 
-    --card: 210 25% 12%;
-    --card-foreground: 0 0% 95%;
+    --card: 220 25% 10%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 210 25% 12%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 220 25% 10%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 210 95% 55%;
+    --primary: 195 100% 55%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 210 95% 70%;
-    --primary-dark: 210 95% 40%;
+    --primary-light: 195 100% 70%;
+    --primary-dark: 195 100% 40%;
 
-    --secondary: 155 65% 55%;
+    --secondary: 180 85% 50%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 155 65% 70%;
+    --secondary-light: 180 85% 65%;
 
-    --accent: 270 60% 65%;
+    --accent: 195 100% 55%;
     --accent-foreground: 0 0% 100%;
 
-    --muted: 210 25% 15%;
-    --muted-foreground: 210 15% 60%;
+    --muted: 220 25% 15%;
+    --muted-foreground: 220 15% 65%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 25% 20%;
-    --input: 210 25% 20%;
-    --ring: 210 95% 55%;
+    --border: 220 25% 18%;
+    --input: 220 25% 18%;
+    --ring: 195 100% 55%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(210 95% 20% / 0.3) 0%, hsl(155 65% 20% / 0.3) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(195 100% 20% / 0.4) 0%, hsl(180 85% 20% / 0.4) 100%);
+    --shadow-glow: 0 0 40px hsl(195 100% 50% / 0.4);
   }
 }
 

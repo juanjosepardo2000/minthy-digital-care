@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Stethoscope, Users } from "lucide-react";
 import heroImage from "@/assets/hero-medical.jpg";
+import heroNetwork from "@/assets/hero-network.jpg";
+import logo from "@/assets/minthy-logo.png";
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -9,19 +11,29 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-16">
-      {/* Background Gradient */}
+      {/* Background Gradient with futuristic effect */}
       <div className="absolute inset-0 gradient-hero -z-10" />
       
-      {/* Animated Background Shapes */}
+      {/* Animated Background Shapes - More futuristic */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-1/4 -left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-soft" />
-        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-soft" />
+        <div className="absolute bottom-1/4 -right-20 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "2s" }} />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="space-y-8 animate-fade-in-up">
+            {/* Logo centered above title */}
+            <div className="flex justify-center lg:justify-start mb-4">
+              <img 
+                src={logo} 
+                alt="Minthy" 
+                className="h-12 w-auto opacity-90"
+              />
+            </div>
+
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm text-primary font-medium">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -32,7 +44,7 @@ export const Hero = () => {
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
               La salud digital{" "}
-              <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                 al alcance de tus manos
               </span>
             </h1>
@@ -83,8 +95,18 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Image with network background */}
           <div className="relative animate-scale-in" style={{ animationDelay: "0.2s" }}>
+            {/* Network background */}
+            <div className="absolute inset-0 rounded-2xl overflow-hidden opacity-30">
+              <img 
+                src={heroNetwork} 
+                alt="Red de conexiones de salud digital" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            {/* Main image */}
             <div className="relative rounded-2xl overflow-hidden shadow-strong">
               <img 
                 src={heroImage} 
@@ -92,7 +114,7 @@ export const Hero = () => {
                 className="w-full h-auto"
               />
               {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent" />
             </div>
             
             {/* Floating Stats Cards */}

@@ -68,31 +68,65 @@ export const Journey = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-            {/* Connection line */}
-            <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-secondary to-accent opacity-20" />
+        <div className="max-w-6xl mx-auto">
+          {/* Desktop: Horizontal Timeline */}
+          <div className="hidden lg:grid lg:grid-cols-4 gap-8 relative">
+            {/* Connection line - horizontal */}
+            <div className="absolute top-8 left-8 right-8 h-1 bg-gradient-to-r from-primary via-secondary via-accent to-primary rounded-full" style={{ top: '2rem' }} />
 
             {steps.map((step, index) => {
               const colors = getColorClasses(step.color);
               return (
                 <div 
-                  key={index}
+                  key={`desktop-${index}`}
                   className="relative animate-fade-in-up"
                   style={{ animationDelay: `${index * 0.15}s` }}
                 >
                   {/* Step number */}
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-full ${colors.bg} text-white flex items-center justify-center text-2xl font-bold shadow-medium ring-8 ${colors.ring} relative z-10`}>
+                  <div className={`w-16 h-16 mx-auto mb-6 rounded-full ${colors.bg} text-white flex items-center justify-center text-2xl font-bold shadow-glow ring-8 ${colors.ring} relative z-10`}>
                     {index + 1}
                   </div>
 
                   {/* Icon */}
-                  <div className={`w-14 h-14 mx-auto mb-4 rounded-xl ${colors.bg}/10 flex items-center justify-center`}>
+                  <div className={`w-14 h-14 mx-auto mb-4 rounded-xl ${colors.bg}/10 flex items-center justify-center hover:scale-110 transition-transform`}>
                     <step.icon className={`w-7 h-7 ${colors.text}`} />
                   </div>
 
                   {/* Content */}
                   <div className="text-center">
+                    <h3 className="text-lg font-semibold mb-3">{step.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Mobile & Tablet: Vertical Timeline */}
+          <div className="lg:hidden space-y-8 relative">
+            {/* Vertical connection line */}
+            <div className="absolute left-8 top-8 bottom-8 w-1 bg-gradient-to-b from-primary via-secondary via-accent to-primary rounded-full" />
+            
+            {steps.map((step, index) => {
+              const colors = getColorClasses(step.color);
+              return (
+                <div 
+                  key={`mobile-${index}`}
+                  className="relative flex gap-6 animate-fade-in-up"
+                  style={{ animationDelay: `${index * 0.15}s` }}
+                >
+                  {/* Step number - left side */}
+                  <div className={`flex-shrink-0 w-16 h-16 rounded-full ${colors.bg} text-white flex items-center justify-center text-2xl font-bold shadow-glow ring-8 ${colors.ring} relative z-10`}>
+                    {index + 1}
+                  </div>
+
+                  {/* Content - right side */}
+                  <div className="flex-1 pt-1">
+                    <div className={`w-12 h-12 mb-4 rounded-xl ${colors.bg}/10 flex items-center justify-center hover:scale-110 transition-transform`}>
+                      <step.icon className={`w-6 h-6 ${colors.text}`} />
+                    </div>
                     <h3 className="text-lg font-semibold mb-3">{step.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {step.description}

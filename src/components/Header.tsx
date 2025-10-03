@@ -1,4 +1,5 @@
 import logo from "@/assets/minthy-logo.png";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const Header = () => {
   return (
@@ -10,6 +11,7 @@ export const Header = () => {
             alt="Minthy - Plataforma de Telemedicina" 
             className="h-8 w-auto"
           />
+          <ThemeToggle />
         </div>
       </div>
     </header>
