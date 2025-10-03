@@ -8,7 +8,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-16">
       {/* Background Gradient */}
       <div className="absolute inset-0 gradient-hero -z-10" />
       
