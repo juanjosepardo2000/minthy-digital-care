@@ -54,7 +54,7 @@ export const Journey = () => {
   };
 
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden">
+    <section id="journey" className="py-20 lg:py-32 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -64,7 +64,8 @@ export const Journey = () => {
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="mb-6">Tu salud en 4 pasos simples</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Desde agendar hasta recibir, todo el proceso es rápido, fácil y completamente digital
+           Con Minthy , la atención médica fluye de principio a fin.
+Agenda, consulta y recibe tus servicios de salud de forma rápida, sencilla y totalmente digital.
           </p>
         </div>
 

@@ -110,7 +110,7 @@ export const Services = () => {
           </p>
         </div>
 
-        <Tabs defaultValue="patients" className="w-full">
+        <Tabs defaultValue="patients" className="w-full" id="medicos">
           <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12">
             <TabsTrigger value="patients" className="text-base">Para Pacientes</TabsTrigger>
             <TabsTrigger value="doctors" className="text-base">Para Médicos</TabsTrigger>
@@ -136,7 +136,7 @@ export const Services = () => {
             </div>
           </TabsContent>
 
-          <TabsContent value="doctors" id="medicos" className="mt-0">
+          <TabsContent value="doctors" className="mt-0">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {doctorServices.map((service, index) => (
                 <Card 

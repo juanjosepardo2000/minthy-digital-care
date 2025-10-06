@@ -10,7 +10,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-16">
+    <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden pt-16">
       {/* Background Gradient with futuristic effect */}
       <div className="absolute inset-0 gradient-hero -z-10" />
       
@@ -25,14 +25,15 @@ export const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="space-y-8 animate-fade-in-up">
-            {/* Logo centered above title */}
-            <div className="flex justify-center lg:justify-start mb-4">
-              <img 
-                src={logo} 
-                alt="Minthy" 
-                className="h-12 w-auto opacity-90"
-              />
-            </div>
+          {/* Logo centered above title */}
+          <div className="absolute left-0 right-0 flex justify-center mb-4">
+            <img 
+              src={logo} 
+              alt="Minthy" 
+              className="h-18 w-auto opacity-90"
+            />
+          </div>
+          <div className="h-22"></div> {/* Spacer para compensar el logo absolute */}
 
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm text-primary font-medium">
               <span className="relative flex h-2 w-2">
@@ -107,16 +108,16 @@ export const Hero = () => {
             </div>
             
             {/* Main image */}
-            <div className="relative rounded-2xl overflow-hidden shadow-strong">
+            <div className="relative rounded-2xl overflow-hidden shadow-strong h-80 lg:h-96">
               <img 
                 src={heroImage} 
                 alt="Médico usando tecnología digital de salud" 
-                className="w-full h-auto"
+                className="w-full h-full object-cover"
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent" />
             </div>
-            
+                        
             {/* Floating Stats Cards */}
             <div className="absolute -bottom-6 -left-6 glass rounded-xl p-4 shadow-medium animate-float">
               <div className="text-2xl font-bold text-primary">24/7</div>
